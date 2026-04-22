@@ -1,0 +1,57 @@
+name: AppStore Indexes
+
+on:
+  pull_request:
+    paths:
+      - apps/**
+      - schema/**
+      - scripts/**
+      - .github/workflows/appstore-indexes.yml
+  push:
+    branches:
+      - develop
+      - main
+    paths:
+      - apps/**
+      - schema/**
+      - scripts/**
+      - .github/workflows/appstore-indexes.yml
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate generated AppStore indexes
+        run: node ./scripts/generate-indexes.mjs --check
+
+  regenerate:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    needs: validate
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Regenerate AppStore indexes
+        run: node ./scripts/generate-indexes.mjs
+      - name: Commit generated indexes
+        run: |
+          if git diff --quiet -- index.json categories developers; then
+            echo "No AppStore index changes to commit"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.json categories developers
+          git commit -m "chore(appstore): regenerate indexes"
+          git push

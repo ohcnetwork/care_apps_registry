@@ -1,0 +1,80 @@
+{
+  "$schema": "../schema/app.schema.json",
+  "slug": "care_pretty_print_fe",
+  "name": "CARE Pretty Print",
+  "description": "ID card and label printing plugin for CARE. Supports browser printing and ZC300 ZPL printing for patient ID cards, wristbands, and other healthcare labels.",
+  "featured": false,
+  "iconUrl": "../assets/care-pretty-print.svg",
+  "developer": {
+    "slug": "ohcnetwork",
+    "name": "Open Healthcare Network",
+    "url": "https://github.com/ohcnetwork"
+  },
+  "categories": [
+    {
+      "slug": "productivity",
+      "name": "Productivity",
+      "description": "Admin-facing tools and workflow accelerators."
+    }
+  ],
+  "baseConfig": {
+    "url": "https://care-pretty-print-fe.pages.dev/assets/remoteEntry.js",
+    "name": "care_pretty_print_fe",
+    "plug": "care_pretty_print_fe"
+  },
+  "source": {
+    "repository": "https://github.com/ohcnetwork/care_pretty_print_fe",
+    "appBaseUrl": "http://localhost:5173"
+  },
+  "standardConfigurations": [
+    {
+      "id": "local-dev",
+      "title": "Local development",
+      "description": "Attach the local preview output from care_pretty_print_fe for development and manual testing.",
+      "config": {
+        "mode": "local"
+      },
+      "appBaseUrl": {
+        "label": "App base URL",
+        "description": "Base URL where the frontend plug is served.",
+        "defaultValue": "http://localhost:5173"
+      },
+      "environments": {
+        "mandatory": [],
+        "defaults": [],
+        "optional": [
+          {
+            "key": "REACT_APP_PATIENT_IDENTIFIER_ID",
+            "label": "Identifier ID",
+            "description": "UUID of the patient identifier to be printed."
+          }
+        ],
+        "custom": {
+          "enabled": true,
+          "label": "Custom environments",
+          "description": "Add extra environment variables for advanced setup."
+        }
+      }
+    }
+  ],
+  "rawSetup": {
+    "id": "raw-setup",
+    "title": "Raw setup",
+    "description": "Start with a minimal plug_config and edit it directly.",
+    "config": {
+      "mode": "manual"
+    },
+    "appBaseUrl": {
+      "label": "App base URL",
+      "defaultValue": "https://care-pretty-print-fe.pages.dev"
+    },
+    "environments": {
+      "mandatory": [],
+      "defaults": [],
+      "custom": {
+        "enabled": true,
+        "label": "Custom environments"
+      }
+    }
+  }
+}

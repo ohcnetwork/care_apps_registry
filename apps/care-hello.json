@@ -1,0 +1,114 @@
+{
+  "$schema": "../schema/app.schema.json",
+  "slug": "care_hello_fe",
+  "name": "CARE Hello",
+  "description": "Sample CARE plugin used to exercise the App Store discovery and setup flow.",
+  "featured": true,
+  "iconUrl": "../assets/care-hello.svg",
+  "developer": {
+    "slug": "ohcnetwork",
+    "name": "Open Healthcare Network",
+    "url": "https://github.com/ohcnetwork"
+  },
+  "categories": [
+    {
+      "slug": "productivity",
+      "name": "Productivity",
+      "description": "Admin-facing tools and workflow accelerators."
+    },
+    {
+      "slug": "integrations",
+      "name": "Integrations",
+      "description": "Apps that connect CARE to external services."
+    }
+  ],
+  "baseConfig": {
+    "url": "https://care-scribe.10bedicu.in/assets/remoteEntry.js",
+    "name": "care_hello_fe",
+    "plug": "care_hello_fe"
+  },
+  "healthCheck": {
+    "url": "{{apiBaseUrl}}/health",
+    "method": "GET",
+    "successStatus": 200
+  },
+  "source": {
+    "repository": "https://github.com/ohcnetwork/care_fe/tree/develop/apps/care_hello_fe",
+    "appBaseUrl": "http://localhost:4173"
+  },
+  "standardConfigurations": [
+    {
+      "id": "local-dev",
+      "title": "Local development",
+      "description": "Attach the local preview output from apps/care_hello_fe for development and manual testing.",
+      "config": {
+        "greeting": "Hello from the App Store",
+        "mode": "local"
+      },
+        "appBaseUrl": {
+          "label": "App base URL",
+          "description": "Base URL where the frontend plug is served.",
+          "defaultValue": "http://localhost:4173"
+        },
+      "environments": {
+        "mandatory": [
+          {
+            "key": "apiBaseUrl",
+            "label": "API base URL",
+            "description": "Server-side API base URL used for the health check before enabling the plug.",
+            "placeholder": "https://care-scribe.10bedicu.in",
+            "defaultValue": "https://care-scribe.10bedicu.in"
+          }
+        ],
+        "defaults": [
+          {
+            "key": "greeting",
+            "label": "Greeting",
+            "description": "Sample configuration value passed into the plugin.",
+            "defaultValue": "Hello from the App Store",
+            "path": "meta.config.greeting"
+          }
+        ],
+        "optional": [
+          {
+            "key": "workspace",
+            "label": "Workspace",
+            "description": "Optional logical workspace name sent to the plugin configuration.",
+            "placeholder": "staging"
+          }
+        ],
+        "custom": {
+          "enabled": true,
+          "label": "Custom environments",
+          "description": "Add extra environment variables for advanced setup."
+        }
+      }
+    }
+  ],
+  "rawSetup": {
+    "id": "raw-setup",
+    "title": "Raw setup",
+    "description": "Start with a minimal plug_config and edit it directly.",
+    "config": {
+      "mode": "manual"
+    },
+    "appBaseUrl": {
+      "label": "App base URL",
+      "defaultValue": "https://care-scribe.10bedicu.in"
+    },
+    "environments": {
+      "mandatory": [
+        {
+          "key": "apiBaseUrl",
+          "label": "API base URL",
+          "placeholder": "https://care-scribe.10bedicu.in"
+        }
+      ],
+      "defaults": [],
+      "custom": {
+        "enabled": true,
+        "label": "Custom environments"
+      }
+    }
+  }
+}

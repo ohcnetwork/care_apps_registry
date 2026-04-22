@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "slug": "productivity",
+  "title": "Productivity",
+  "description": "Admin-facing tools and workflow accelerators.",
+  "apps": [
+    {
+      "slug": "care_analytics_fe",
+      "name": "CARE Analytics",
+      "description": "Analytics dashboard plugin for CARE. Provides data visualization and reporting capabilities for healthcare facility operations and patient care metrics.",
+      "featured": false,
+      "iconUrl": "../assets/care-analytics.svg",
+      "appUrl": "../apps/care-analytics.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "productivity",
+          "name": "Productivity",
+          "description": "Admin-facing tools and workflow accelerators."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_analytics_fe for development and manual testing."
+        }
+      ]
+    },
+    {
+      "slug": "care_cash_management_fe",
+      "name": "CARE Cash Management",
+      "description": "Cash management plugin for CARE. Provides cash drawer session management, transaction tracking, and financial reconciliation for healthcare facility billing operations.",
+      "featured": false,
+      "iconUrl": "../assets/care-cash-management.svg",
+      "appUrl": "../apps/care-cash-management.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "productivity",
+          "name": "Productivity",
+          "description": "Admin-facing tools and workflow accelerators."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_cash_management_fe for development and manual testing."
+        }
+      ]
+    },
+    {
+      "slug": "care_doctor_connect_fe",
+      "name": "CARE Doctor Connect",
+      "description": "Doctor directory and connection plugin for CARE. Enables searching and connecting with healthcare providers across facilities and organizations.",
+      "featured": false,
+      "iconUrl": "../assets/care-doctor-connect.svg",
+      "appUrl": "../apps/care-doctor-connect.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "productivity",
+          "name": "Productivity",
+          "description": "Admin-facing tools and workflow accelerators."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_doctor_connect_fe for development and manual testing."
+        }
+      ]
+    },
+    {
+      "slug": "care_hello_fe",
+      "name": "CARE Hello",
+      "description": "Sample CARE plugin used to exercise the App Store discovery and setup flow.",
+      "featured": true,
+      "iconUrl": "../assets/care-hello.svg",
+      "appUrl": "../apps/care-hello.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "productivity",
+          "name": "Productivity",
+          "description": "Admin-facing tools and workflow accelerators."
+        },
+        {
+          "slug": "integrations",
+          "name": "Integrations",
+          "description": "Apps that connect CARE to external services."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from apps/care_hello_fe for development and manual testing."
+        }
+      ]
+    },
+    {
+      "slug": "care_imports_fe",
+      "name": "CARE Imports",
+      "description": "Bulk data import and export plugin for CARE. Helps hospital administrators set up facilities by importing users, departments, locations, medications, lab tests, and more from CSV files with validation and review workflows.",
+      "featured": true,
+      "iconUrl": "../assets/care-imports.svg",
+      "appUrl": "../apps/care-imports.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "productivity",
+          "name": "Productivity",
+          "description": "Admin-facing tools and workflow accelerators."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_imports_fe for development and manual testing."
+        }
+      ]
+    },
+    {
+      "slug": "care_pretty_print_fe",
+      "name": "CARE Pretty Print",
+      "description": "ID card and label printing plugin for CARE. Supports browser printing and ZC300 ZPL printing for patient ID cards, wristbands, and other healthcare labels.",
+      "featured": false,
+      "iconUrl": "../assets/care-pretty-print.svg",
+      "appUrl": "../apps/care-pretty-print.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "productivity",
+          "name": "Productivity",
+          "description": "Admin-facing tools and workflow accelerators."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_pretty_print_fe for development and manual testing."
+        }
+      ]
+    },
+    {
+      "slug": "care_scribe_fe",
+      "name": "CARE Scribe",
+      "description": "AI-powered medical scriber for clinical documentation. Uses LLM technology to assist healthcare providers with structured medical data entry and clinical notes.",
+      "featured": true,
+      "iconUrl": "../assets/care-scribe.svg",
+      "appUrl": "../apps/care-scribe.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "productivity",
+          "name": "Productivity",
+          "description": "Admin-facing tools and workflow accelerators."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_scribe_fe for development and manual testing."
+        }
+      ]
+    }
+  ]
+}

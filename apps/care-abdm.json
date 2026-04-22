@@ -1,0 +1,74 @@
+{
+  "$schema": "../schema/app.schema.json",
+  "slug": "care_abdm_fe",
+  "name": "CARE ABDM",
+  "description": "ABDM (Ayushman Bharat Digital Mission) integration plugin for CARE. Enables ABHA number linking, consent management, and health information exchange with the Indian national health ecosystem.",
+  "featured": true,
+  "iconUrl": "../assets/care-abdm.svg",
+  "developer": {
+    "slug": "ohcnetwork",
+    "name": "Open Healthcare Network",
+    "url": "https://github.com/ohcnetwork"
+  },
+  "categories": [
+    {
+      "slug": "integrations",
+      "name": "Integrations",
+      "description": "Apps that connect CARE to external services."
+    }
+  ],
+  "baseConfig": {
+    "url": "https://care-abdm.ohc.network/assets/remoteEntry.js",
+    "name": "care_abdm_fe",
+    "plug": "care_abdm_fe"
+  },
+  "source": {
+    "repository": "https://github.com/ohcnetwork/care_abdm_fe",
+    "appBaseUrl": "http://localhost:5173"
+  },
+  "standardConfigurations": [
+    {
+      "id": "local-dev",
+      "title": "Local development",
+      "description": "Attach the local preview output from care_abdm_fe for development and manual testing.",
+      "config": {
+        "mode": "local"
+      },
+      "appBaseUrl": {
+        "label": "App base URL",
+        "description": "Base URL where the frontend plug is served.",
+        "defaultValue": "http://localhost:5173"
+      },
+      "environments": {
+        "mandatory": [],
+        "defaults": [],
+        "optional": [],
+        "custom": {
+          "enabled": true,
+          "label": "Custom environments",
+          "description": "Add extra environment variables for advanced setup."
+        }
+      }
+    }
+  ],
+  "rawSetup": {
+    "id": "raw-setup",
+    "title": "Raw setup",
+    "description": "Start with a minimal plug_config and edit it directly.",
+    "config": {
+      "mode": "manual"
+    },
+    "appBaseUrl": {
+      "label": "App base URL",
+      "defaultValue": "https://care-abdm.ohc.network"
+    },
+    "environments": {
+      "mandatory": [],
+      "defaults": [],
+      "custom": {
+        "enabled": true,
+        "label": "Custom environments"
+      }
+    }
+  }
+}

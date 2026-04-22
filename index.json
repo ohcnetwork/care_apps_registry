@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "featuredApps": [
+    {
+      "slug": "care_abdm_fe",
+      "name": "CARE ABDM",
+      "description": "ABDM (Ayushman Bharat Digital Mission) integration plugin for CARE. Enables ABHA number linking, consent management, and health information exchange with the Indian national health ecosystem.",
+      "featured": true,
+      "iconUrl": "./assets/care-abdm.svg",
+      "appUrl": "./apps/care-abdm.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "integrations",
+          "name": "Integrations",
+          "description": "Apps that connect CARE to external services."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_abdm_fe for development and manual testing."
+        }
+      ]
+    },
+    {
+      "slug": "care_hello_fe",
+      "name": "CARE Hello",
+      "description": "Sample CARE plugin used to exercise the App Store discovery and setup flow.",
+      "featured": true,
+      "iconUrl": "./assets/care-hello.svg",
+      "appUrl": "./apps/care-hello.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "productivity",
+          "name": "Productivity",
+          "description": "Admin-facing tools and workflow accelerators."
+        },
+        {
+          "slug": "integrations",
+          "name": "Integrations",
+          "description": "Apps that connect CARE to external services."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from apps/care_hello_fe for development and manual testing."
+        }
+      ]
+    },
+    {
+      "slug": "care_imports_fe",
+      "name": "CARE Imports",
+      "description": "Bulk data import and export plugin for CARE. Helps hospital administrators set up facilities by importing users, departments, locations, medications, lab tests, and more from CSV files with validation and review workflows.",
+      "featured": true,
+      "iconUrl": "./assets/care-imports.svg",
+      "appUrl": "./apps/care-imports.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "productivity",
+          "name": "Productivity",
+          "description": "Admin-facing tools and workflow accelerators."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_imports_fe for development and manual testing."
+        }
+      ]
+    },
+    {
+      "slug": "care_scribe_fe",
+      "name": "CARE Scribe",
+      "description": "AI-powered medical scriber for clinical documentation. Uses LLM technology to assist healthcare providers with structured medical data entry and clinical notes.",
+      "featured": true,
+      "iconUrl": "./assets/care-scribe.svg",
+      "appUrl": "./apps/care-scribe.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "productivity",
+          "name": "Productivity",
+          "description": "Admin-facing tools and workflow accelerators."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_scribe_fe for development and manual testing."
+        }
+      ]
+    },
+    {
+      "slug": "care_teleicu_devices_fe",
+      "name": "CARE TeleICU Devices",
+      "description": "TeleICU Devices MFE Plug for CARE. Enables integration with Gateway, ONVIF Cameras, and Vitals Observation Devices (HL7 Monitors) for remote ICU monitoring.",
+      "featured": true,
+      "iconUrl": "./assets/care-teleicu-devices.svg",
+      "appUrl": "./apps/care-teleicu-devices.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "integrations",
+          "name": "Integrations",
+          "description": "Apps that connect CARE to external services."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_teleicu_devices_fe for development and manual testing."
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "slug": "integrations",
+      "name": "Integrations",
+      "description": "Apps that connect CARE to external services.",
+      "appCount": 7,
+      "url": "./categories/integrations.json"
+    },
+    {
+      "slug": "productivity",
+      "name": "Productivity",
+      "description": "Admin-facing tools and workflow accelerators.",
+      "appCount": 7,
+      "url": "./categories/productivity.json"
+    }
+  ],
+  "developers": [
+    {
+      "slug": "ohcnetwork",
+      "name": "Open Healthcare Network",
+      "appCount": 13,
+      "url": "./developers/ohcnetwork.json"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "../schema/app.schema.json",
+  "slug": "care_serial_scanner_fe",
+  "name": "CARE Serial Scanner",
+  "description": "Cross-platform barcode scanner integration for CARE. Provides USB-COM barcode scanner support via Web Serial API with WebSocket bridge fallback for Firefox/Safari using Care Scanner Bridge.",
+  "featured": false,
+  "iconUrl": "../assets/care-serial-scanner.svg",
+  "developer": {
+    "slug": "ohcnetwork",
+    "name": "Open Healthcare Network",
+    "url": "https://github.com/ohcnetwork"
+  },
+  "categories": [
+    {
+      "slug": "integrations",
+      "name": "Integrations",
+      "description": "Apps that connect CARE to external services."
+    }
+  ],
+  "baseConfig": {
+    "url": "https://care-serial-scanner.ohc.network/assets/remoteEntry.js",
+    "name": "care_serial_scanner_fe",
+    "plug": "care_serial_scanner_fe"
+  },
+  "source": {
+    "repository": "https://github.com/ohcnetwork/care_serial_scanner_fe",
+    "appBaseUrl": "http://localhost:5173"
+  },
+  "standardConfigurations": [
+    {
+      "id": "local-dev",
+      "title": "Local development",
+      "description": "Attach the local preview output from care_serial_scanner_fe for development and manual testing.",
+      "config": {
+        "mode": "local"
+      },
+      "appBaseUrl": {
+        "label": "App base URL",
+        "description": "Base URL where the frontend plug is served.",
+        "defaultValue": "http://localhost:5173"
+      },
+      "environments": {
+        "mandatory": [],
+        "defaults": [],
+        "optional": [],
+        "custom": {
+          "enabled": true,
+          "label": "Custom environments",
+          "description": "Add extra environment variables for advanced setup."
+        }
+      }
+    }
+  ],
+  "rawSetup": {
+    "id": "raw-setup",
+    "title": "Raw setup",
+    "description": "Start with a minimal plug_config and edit it directly.",
+    "config": {
+      "mode": "manual"
+    },
+    "appBaseUrl": {
+      "label": "App base URL",
+      "defaultValue": "https://care-serial-scanner.ohc.network"
+    },
+    "environments": {
+      "mandatory": [],
+      "defaults": [],
+      "custom": {
+        "enabled": true,
+        "label": "Custom environments"
+      }
+    }
+  }
+}

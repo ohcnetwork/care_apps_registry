@@ -1,0 +1,236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://care.ohc.network/appstore/schema/app.schema.json",
+  "title": "CARE AppStore App Definition",
+  "type": "object",
+  "required": [
+    "slug",
+    "name",
+    "description",
+    "developer",
+    "categories",
+    "baseConfig",
+    "source",
+    "standardConfigurations",
+    "rawSetup"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9_\\-]+$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "iconUrl": {
+      "type": "string"
+    },
+    "developer": {
+      "type": "object",
+      "required": ["slug", "name"],
+      "properties": {
+        "slug": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["slug", "name"],
+        "properties": {
+          "slug": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "baseConfig": {
+      "type": "object",
+      "required": ["url", "name", "plug"],
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "plug": {
+          "type": "string"
+        }
+      }
+    },
+    "healthCheck": {
+      "type": "object",
+      "required": ["url"],
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string",
+          "enum": ["GET", "POST"]
+        },
+        "successStatus": {
+          "type": "number"
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["repository"],
+      "properties": {
+        "repository": {
+          "type": "string"
+        },
+        "manifestUrl": {
+          "type": "string"
+        },
+        "appBaseUrl": {
+          "type": "string"
+        }
+      }
+    },
+    "standardConfigurations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/setup"
+      }
+    },
+    "rawSetup": {
+      "$ref": "#/$defs/setup"
+    }
+  },
+  "$defs": {
+    "setup": {
+      "type": "object",
+      "required": ["id", "title"],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "config": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "appBaseUrl": {
+          "$ref": "#/$defs/setupAppBaseUrlField"
+        },
+        "environments": {
+          "type": "object",
+          "properties": {
+            "mandatory": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/environmentField"
+              }
+            },
+            "defaults": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/environmentField"
+              }
+            },
+            "optional": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/environmentField"
+              }
+            },
+            "custom": {
+              "type": "object",
+              "required": ["enabled"],
+              "properties": {
+                "enabled": {
+                  "type": "boolean"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "environmentField": {
+      "type": "object",
+      "required": ["key", "label"],
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "placeholder": {
+          "type": "string"
+        },
+        "defaultValue": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        }
+      }
+    },
+    "setupAppBaseUrlField": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "placeholder": {
+          "type": "string"
+        },
+        "defaultValue": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

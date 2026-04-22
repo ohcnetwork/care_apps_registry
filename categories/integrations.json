@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "slug": "integrations",
+  "title": "Integrations",
+  "description": "Apps that connect CARE to external services.",
+  "apps": [
+    {
+      "slug": "care_abdm_fe",
+      "name": "CARE ABDM",
+      "description": "ABDM (Ayushman Bharat Digital Mission) integration plugin for CARE. Enables ABHA number linking, consent management, and health information exchange with the Indian national health ecosystem.",
+      "featured": true,
+      "iconUrl": "../assets/care-abdm.svg",
+      "appUrl": "../apps/care-abdm.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "integrations",
+          "name": "Integrations",
+          "description": "Apps that connect CARE to external services."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_abdm_fe for development and manual testing."
+        }
+      ]
+    },
+    {
+      "slug": "care_hcx_fe",
+      "name": "CARE HCX",
+      "description": "Health Claims Exchange (HCX) integration plugin for CARE. Enables insurance claim processing, preauthorization, and communication with health insurance payers through the HCX protocol.",
+      "featured": false,
+      "iconUrl": "../assets/care-hcx.svg",
+      "appUrl": "../apps/care-hcx.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "integrations",
+          "name": "Integrations",
+          "description": "Apps that connect CARE to external services."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_hcx_fe for development and manual testing."
+        }
+      ]
+    },
+    {
+      "slug": "care_hello_fe",
+      "name": "CARE Hello",
+      "description": "Sample CARE plugin used to exercise the App Store discovery and setup flow.",
+      "featured": true,
+      "iconUrl": "../assets/care-hello.svg",
+      "appUrl": "../apps/care-hello.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "productivity",
+          "name": "Productivity",
+          "description": "Admin-facing tools and workflow accelerators."
+        },
+        {
+          "slug": "integrations",
+          "name": "Integrations",
+          "description": "Apps that connect CARE to external services."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from apps/care_hello_fe for development and manual testing."
+        }
+      ]
+    },
+    {
+      "slug": "care_kutumba_fe",
+      "name": "CARE Kutumba",
+      "description": "Kutumba integration plugin for CARE. Enables integration with the Kutumba family database system for patient identification and demographic data exchange.",
+      "featured": false,
+      "iconUrl": "../assets/care-kutumba.svg",
+      "appUrl": "../apps/care-kutumba.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "integrations",
+          "name": "Integrations",
+          "description": "Apps that connect CARE to external services."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_kutumba_fe for development and manual testing."
+        }
+      ]
+    },
+    {
+      "slug": "care_livekit_fe",
+      "name": "CARE LiveKit",
+      "description": "LiveKit integration plugin for CARE. Enables real-time video and audio communication for telemedicine consultations and remote patient monitoring.",
+      "featured": false,
+      "iconUrl": "../assets/care-livekit.svg",
+      "appUrl": "../apps/care-livekit.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "integrations",
+          "name": "Integrations",
+          "description": "Apps that connect CARE to external services."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_livekit_fe for development and manual testing."
+        }
+      ]
+    },
+    {
+      "slug": "care_serial_scanner_fe",
+      "name": "CARE Serial Scanner",
+      "description": "Cross-platform barcode scanner integration for CARE. Provides USB-COM barcode scanner support via Web Serial API with WebSocket bridge fallback for Firefox/Safari using Care Scanner Bridge.",
+      "featured": false,
+      "iconUrl": "../assets/care-serial-scanner.svg",
+      "appUrl": "../apps/care-serial-scanner.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "integrations",
+          "name": "Integrations",
+          "description": "Apps that connect CARE to external services."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_serial_scanner_fe for development and manual testing."
+        }
+      ]
+    },
+    {
+      "slug": "care_teleicu_devices_fe",
+      "name": "CARE TeleICU Devices",
+      "description": "TeleICU Devices MFE Plug for CARE. Enables integration with Gateway, ONVIF Cameras, and Vitals Observation Devices (HL7 Monitors) for remote ICU monitoring.",
+      "featured": true,
+      "iconUrl": "../assets/care-teleicu-devices.svg",
+      "appUrl": "../apps/care-teleicu-devices.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "integrations",
+          "name": "Integrations",
+          "description": "Apps that connect CARE to external services."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_teleicu_devices_fe for development and manual testing."
+        }
+      ]
+    }
+  ]
+}
