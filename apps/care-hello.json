@@ -23,7 +23,7 @@
     }
   ],
   "baseConfig": {
-    "url": "https://care-scribe.10bedicu.in/assets/remoteEntry.js",
+    "url": "https://care_hello.pages.dev/assets/remoteEntry.js",
     "name": "care_hello_fe",
     "plug": "care_hello_fe"
   },
@@ -33,7 +33,7 @@
     "successStatus": 200
   },
   "source": {
-    "repository": "https://github.com/ohcnetwork/care_fe/tree/develop/apps/care_hello_fe",
+    "repository": "https://github.com/ohcnetwork/care_hello_fe",
     "appBaseUrl": "http://localhost:4173"
   },
   "standardConfigurations": [
