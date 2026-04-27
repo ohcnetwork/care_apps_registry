@@ -63,8 +63,7 @@ npm run appstore:generate
 Serve the directory locally:
 
 ```bash
-cd AppStore
-npx serve .
+npm run serve
 ```
 
 Example root index URL for CARE:
