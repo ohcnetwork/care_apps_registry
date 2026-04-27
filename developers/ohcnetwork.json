@@ -254,7 +254,7 @@
     {
       "slug": "care_pretty_print_fe",
       "name": "CARE Pretty Print",
-      "description": "ID card and label printing plugin for CARE. Supports browser printing and ZC300 ZPL printing for patient ID cards, wristbands, and other healthcare labels.",
+      "description": "CARE plugin for ID card printing with browser support, currently limited to landscape CR80 (85 × 54 mm) cards with a fixed, non-customizable layout.",
       "featured": false,
       "iconUrl": "../assets/care-pretty-print.svg",
       "appUrl": "../apps/care-pretty-print.json",
