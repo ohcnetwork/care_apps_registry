@@ -1,0 +1,22 @@
+{
+  "name": "care-apps-registry",
+  "version": "1.0.0",
+  "description": "CARE AppStore - A temporary, extraction-friendly App Store repository for CARE plugins",
+  "type": "module",
+  "scripts": {
+    "appstore:generate": "node scripts/generate-indexes.mjs",
+    "appstore:check": "node scripts/generate-indexes.mjs --check",
+    "serve": "npx http-server -p 3000 --cors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohcnetwork/care_apps_registry.git"
+  },
+  "keywords": [
+    "care",
+    "appstore",
+    "plugins"
+  ],
+  "author": "ohcnetwork",
+  "license": "MIT"
+}
