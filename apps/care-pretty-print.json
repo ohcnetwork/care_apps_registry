@@ -2,7 +2,7 @@
   "$schema": "../schema/app.schema.json",
   "slug": "care_pretty_print_fe",
   "name": "CARE Pretty Print",
-  "description": "ID card and label printing plugin for CARE. Supports browser printing and ZC300 ZPL printing for patient ID cards, wristbands, and other healthcare labels.",
+  "description": "CARE plugin for ID card printing with browser support, currently limited to landscape CR80 (85 × 54 mm) cards with a fixed, non-customizable layout.",
   "featured": false,
   "iconUrl": "../assets/care-pretty-print.svg",
   "developer": {
@@ -22,9 +22,14 @@
     "name": "care_pretty_print_fe",
     "plug": "care_pretty_print_fe"
   },
+  "healthCheck": {
+    "url": "{{appBaseUrl}}/assets/remoteEntry.js",
+    "method": "GET",
+    "successStatus": 200
+  },
   "source": {
     "repository": "https://github.com/ohcnetwork/care_pretty_print_fe",
-    "appBaseUrl": "http://localhost:5173"
+    "appBaseUrl": "http://localhost:10120"
   },
   "standardConfigurations": [
     {
@@ -37,7 +42,7 @@
       "appBaseUrl": {
         "label": "App base URL",
         "description": "Base URL where the frontend plug is served.",
-        "defaultValue": "http://localhost:5173"
+        "defaultValue": "http://localhost:10120"
       },
       "environments": {
         "mandatory": [],
@@ -50,7 +55,36 @@
           }
         ],
         "custom": {
-          "enabled": true,
+          "enabled": false,
+          "label": "Custom environments",
+          "description": "Add extra environment variables for advanced setup."
+        }
+      }
+    },
+    {
+      "id": "production",
+      "title": "Production",
+      "description": "Production configuration for care_pretty_print_fe.",
+      "config": {
+        "mode": "production"
+      },
+      "appBaseUrl": {
+        "label": "App base URL",
+        "description": "Base URL where the frontend plug is served.",
+        "defaultValue": "https://care-pretty-print-fe.pages.dev"
+      },
+      "environments": {
+        "mandatory": [],
+        "defaults": [],
+        "optional": [
+          {
+            "key": "REACT_APP_PATIENT_IDENTIFIER_ID",
+            "label": "Identifier ID",
+            "description": "UUID of the patient identifier to be printed."
+          }
+        ],
+        "custom": {
+          "enabled": false,
           "label": "Custom environments",
           "description": "Add extra environment variables for advanced setup."
         }
