@@ -275,6 +275,11 @@
           "id": "local-dev",
           "title": "Local development",
           "description": "Attach the local preview output from care_pretty_print_fe for development and manual testing."
+        },
+        {
+          "id": "production",
+          "title": "Production",
+          "description": "Production configuration for care_pretty_print_fe."
         }
       ]
     },
