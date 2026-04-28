@@ -1,0 +1,97 @@
+{
+  "$schema": "../schema/app.schema.json",
+  "slug": "care_system_diagnostics_fe",
+  "name": "CARE System Diagnostics",
+  "description": "A comprehensive diagnostics plugin for the CARE platform that helps healthcare facility administrators verify system functionality, test hardware, and troubleshoot issues.",
+  "featured": false,
+  "iconUrl": "../assets/care-system-diagnostics.svg",
+  "developer": {
+    "slug": "ohcnetwork",
+    "name": "Open Healthcare Network",
+    "url": "https://github.com/ohcnetwork"
+  },
+  "categories": [
+    {
+      "slug": "productivity",
+      "name": "Productivity",
+      "description": "Admin-facing tools and workflow accelerators."
+    }
+  ],
+  "baseConfig": {
+    "url": "https://care-system-diagnostics.pages.dev/assets/remoteEntry.js",
+    "name": "care_system_diagnostics_fe",
+    "plug": "care_system_diagnostics_fe"
+  },
+  "source": {
+    "repository": "https://github.com/ohcnetwork/care_system_diagnostics_fe",
+    "appBaseUrl": "http://localhost:10120"
+  },
+  "standardConfigurations": [
+    {
+      "id": "local-dev",
+      "title": "Local development",
+      "description": "Attach the local preview output from care_system_diagnostics_fe for development and manual testing.",
+      "config": {
+        "mode": "local"
+      },
+      "appBaseUrl": {
+        "label": "App base URL",
+        "description": "Base URL where the frontend plug is served.",
+        "defaultValue": "http://localhost:10120"
+      },
+      "environments": {
+        "mandatory": [],
+        "defaults": [],
+        "optional": [],
+        "custom": {
+          "enabled": false,
+          "label": "Custom environments",
+          "description": "Add extra environment variables for advanced setup."
+        }
+      }
+    },
+    {
+      "id": "production",
+      "title": "Production",
+      "description": "Production configuration for care_system_diagnostics_fe.",
+      "config": {
+        "mode": "production"
+      },
+      "appBaseUrl": {
+        "label": "App base URL",
+        "description": "Base URL where the frontend plug is served.",
+        "defaultValue": "http://localhost:10120"
+      },
+      "environments": {
+        "mandatory": [],
+        "defaults": [],
+        "optional": [],
+        "custom": {
+          "enabled": false,
+          "label": "Custom environments",
+          "description": "Add extra environment variables for advanced setup."
+        }
+      }
+    }
+  ],
+  "rawSetup": {
+    "id": "raw-setup",
+    "title": "Raw setup",
+    "description": "Start with a minimal plug_config and edit it directly.",
+    "config": {
+      "mode": "manual"
+    },
+    "appBaseUrl": {
+      "label": "App base URL",
+      "defaultValue": "https://care-system-diagnostics.pages.dev"
+    },
+    "environments": {
+      "mandatory": [],
+      "defaults": [],
+      "custom": {
+        "enabled": false,
+        "label": "Custom environments"
+      }
+    }
+  }
+}
