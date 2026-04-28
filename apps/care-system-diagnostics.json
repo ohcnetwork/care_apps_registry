@@ -22,6 +22,11 @@
     "name": "care_system_diagnostics_fe",
     "plug": "care_system_diagnostics_fe"
   },
+  "healthCheck": {
+    "url": "{{appBaseUrl}}/assets/remoteEntry.js",
+    "method": "GET",
+    "successStatus": 200
+  },
   "source": {
     "repository": "https://github.com/ohcnetwork/care_system_diagnostics_fe",
     "appBaseUrl": "http://localhost:10120"
@@ -60,7 +65,7 @@
       "appBaseUrl": {
         "label": "App base URL",
         "description": "Base URL where the frontend plug is served.",
-        "defaultValue": "http://localhost:10120"
+        "defaultValue": "https://care-system-diagnostics.pages.dev"
       },
       "environments": {
         "mandatory": [],
