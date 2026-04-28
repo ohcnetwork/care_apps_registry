@@ -23,7 +23,7 @@
     "plug": "care_pretty_print_fe"
   },
   "healthCheck": {
-    "url": "{{apiBaseUrl}}/health",
+    "url": "{{appBaseUrl}}/assets/remoteEntry.js",
     "method": "GET",
     "successStatus": 200
   },
