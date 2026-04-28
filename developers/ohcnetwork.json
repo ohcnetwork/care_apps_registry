@@ -328,7 +328,12 @@
         {
           "id": "local-dev",
           "title": "Local development",
-          "description": "Attach the local preview output from care_serial_scanner_fe for development and manual testing."
+          "description": "Connect to your local development server for testing and debugging."
+        },
+        {
+          "id": "production",
+          "title": "Production",
+          "description": "Production configuration for care_serial_scanner_fe."
         }
       ]
     },
