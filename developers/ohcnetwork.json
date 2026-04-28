@@ -333,6 +333,38 @@
       ]
     },
     {
+      "slug": "care_system_diagnostics_fe",
+      "name": "CARE System Diagnostics",
+      "description": "A comprehensive diagnostics plugin for the CARE platform that helps healthcare facility administrators verify system functionality, test hardware, and troubleshoot issues.",
+      "featured": false,
+      "iconUrl": "../assets/care-system-diagnostics.svg",
+      "appUrl": "../apps/care-system-diagnostics.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "productivity",
+          "name": "Productivity",
+          "description": "Admin-facing tools and workflow accelerators."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_system_diagnostics_fe for development and manual testing."
+        },
+        {
+          "id": "production",
+          "title": "Production",
+          "description": "Production configuration for care_system_diagnostics_fe."
+        }
+      ]
+    },
+    {
       "slug": "care_teleicu_devices_fe",
       "name": "CARE TeleICU Devices",
       "description": "TeleICU Devices MFE Plug for CARE. Enables integration with Gateway, ONVIF Cameras, and Vitals Observation Devices (HL7 Monitors) for remote ICU monitoring.",
