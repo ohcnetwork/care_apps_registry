@@ -5,6 +5,38 @@
   "description": "Admin-facing tools and workflow accelerators.",
   "apps": [
     {
+      "slug": "care_ai_vision_fe",
+      "name": "CARE AI Vision",
+      "description": "AI-powered CARE plugin to extract and auto-fill patient registration details from scanned or photographed forms, with automatic governance hierarchy resolution.",
+      "featured": false,
+      "iconUrl": "../assets/care-ai-vision.svg",
+      "appUrl": "../apps/care-ai-vision.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "productivity",
+          "name": "Productivity",
+          "description": "Admin-facing tools and workflow accelerators."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_ai_vision_fe for development and manual testing."
+        },
+        {
+          "id": "production",
+          "title": "Production",
+          "description": "Production configuration for care_ai_vision_fe."
+        }
+      ]
+    },
+    {
       "slug": "care_analytics_fe",
       "name": "CARE Analytics",
       "description": "Analytics dashboard plugin for CARE. Provides data visualization and reporting capabilities for healthcare facility operations and patient care metrics.",

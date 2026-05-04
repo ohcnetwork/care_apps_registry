@@ -154,7 +154,7 @@
       "slug": "productivity",
       "name": "Productivity",
       "description": "Admin-facing tools and workflow accelerators.",
-      "appCount": 7,
+      "appCount": 8,
       "url": "./categories/productivity.json"
     }
   ],
@@ -162,7 +162,7 @@
     {
       "slug": "ohcnetwork",
       "name": "Open Healthcare Network",
-      "appCount": 13,
+      "appCount": 14,
       "url": "./developers/ohcnetwork.json"
     }
   ]
