@@ -2,7 +2,7 @@
   "$schema": "../schema/app.schema.json",
   "slug": "care_analytics_fe",
   "name": "CARE Analytics",
-  "description": "Analytics dashboard plugin for CARE. Provides data visualization and reporting capabilities for healthcare facility operations and patient care metrics.",
+  "description": "CARE Analytics plugin provides data visualization and reporting capabilities for healthcare facility operations and patient care metrics.",
   "featured": false,
   "iconUrl": "../assets/care-analytics.svg",
   "developer": {
@@ -22,9 +22,14 @@
     "name": "care_analytics_fe",
     "plug": "care_analytics_fe"
   },
+  "healthCheck": {
+    "url": "{{appBaseUrl}}/assets/remoteEntry.js",
+    "method": "GET",
+    "successStatus": 200
+  },
   "source": {
     "repository": "https://github.com/ohcnetwork/care_analytics_fe",
-    "appBaseUrl": "http://localhost:5173"
+    "appBaseUrl": "http://localhost:10120"
   },
   "standardConfigurations": [
     {
@@ -37,7 +42,7 @@
       "appBaseUrl": {
         "label": "App base URL",
         "description": "Base URL where the frontend plug is served.",
-        "defaultValue": "http://localhost:5173"
+        "defaultValue": "http://localhost:10120"
       },
       "environments": {
         "mandatory": [],
@@ -45,6 +50,29 @@
         "optional": [],
         "custom": {
           "enabled": true,
+          "label": "Custom environments",
+          "description": "Add extra environment variables for advanced setup."
+        }
+      }
+    },
+    {
+      "id": "production",
+      "title": "Production",
+      "description": "Production configuration for care_analytics_fe.",
+      "config": {
+        "mode": "production"
+      },
+      "appBaseUrl": {
+        "label": "App base URL",
+        "description": "Base URL where the frontend plug is served.",
+        "defaultValue": "https://care-analytics-fe.pages.dev"
+      },
+      "environments": {
+        "mandatory": [],
+        "defaults": [],
+        "optional": [],
+        "custom": {
+          "enabled": false,
           "label": "Custom environments",
           "description": "Add extra environment variables for advanced setup."
         }
@@ -66,7 +94,7 @@
       "mandatory": [],
       "defaults": [],
       "custom": {
-        "enabled": true,
+        "enabled": false,
         "label": "Custom environments"
       }
     }

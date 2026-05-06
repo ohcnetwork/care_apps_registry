@@ -39,7 +39,7 @@
     {
       "slug": "care_analytics_fe",
       "name": "CARE Analytics",
-      "description": "Analytics dashboard plugin for CARE. Provides data visualization and reporting capabilities for healthcare facility operations and patient care metrics.",
+      "description": "CARE Analytics plugin provides data visualization and reporting capabilities for healthcare facility operations and patient care metrics.",
       "featured": false,
       "iconUrl": "../assets/care-analytics.svg",
       "appUrl": "../apps/care-analytics.json",
