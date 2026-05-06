@@ -1,0 +1,114 @@
+{
+  "$schema": "../schema/app.schema.json",
+  "slug": "care_ai_vision_fe",
+  "name": "CARE AI Vision",
+  "description": "AI-powered CARE plugin to extract and auto-fill patient registration details from scanned or photographed forms, with automatic governance hierarchy resolution.",
+  "featured": false,
+  "iconUrl": "../assets/care-ai-vision.svg",
+  "developer": {
+    "slug": "ohcnetwork",
+    "name": "Open Healthcare Network",
+    "url": "https://github.com/ohcnetwork"
+  },
+  "categories": [
+    {
+      "slug": "productivity",
+      "name": "Productivity",
+      "description": "Admin-facing tools and workflow accelerators."
+    }
+  ],
+  "baseConfig": {
+    "url": "https://care-ai-vision.pages.dev/assets/remoteEntry.js",
+    "name": "care_ai_vision_fe",
+    "plug": "care_ai_vision_fe"
+  },
+  "healthCheck": {
+    "url": "{{appBaseUrl}}/assets/remoteEntry.js",
+    "method": "GET",
+    "successStatus": 200
+  },
+  "source": {
+    "repository": "https://github.com/ohcnetwork/care_ai_vision_fe",
+    "appBaseUrl": "http://localhost:10120"
+  },
+  "standardConfigurations": [
+    {
+      "id": "local-dev",
+      "title": "Local development",
+      "description": "Attach the local preview output from care_ai_vision_fe for development and manual testing.",
+      "config": {
+        "mode": "local"
+      },
+      "appBaseUrl": {
+        "label": "App base URL",
+        "description": "Base URL where the frontend plug is served.",
+        "defaultValue": "http://localhost:10120"
+      },
+      "environments": {
+        "mandatory": [
+          {
+            "key": "REACT_APP_GEMINI_API_KEY",
+            "label": "Gemini API Key",
+            "description": "API key for Google Gemini Flash, obtain from https://aistudio.google.com/apikey."
+          }
+        ],
+        "defaults": [],
+        "optional": [],
+        "custom": {
+          "enabled": false,
+          "label": "Custom environments",
+          "description": "Add extra environment variables for advanced setup."
+        }
+      }
+    },
+    {
+      "id": "production",
+      "title": "Production",
+      "description": "Production configuration for care_ai_vision_fe.",
+      "config": {
+        "mode": "production"
+      },
+      "appBaseUrl": {
+        "label": "App base URL",
+        "description": "Base URL where the frontend plug is served.",
+        "defaultValue": "https://care-ai-vision.pages.dev"
+      },
+      "environments": {
+        "mandatory": [
+          {
+            "key": "REACT_APP_GEMINI_API_KEY",
+            "label": "Gemini API Key",
+            "description": "API key for Google Gemini Flash, obtain from https://aistudio.google.com/apikey."
+          }
+        ],
+        "defaults": [],
+        "optional": [],
+        "custom": {
+          "enabled": false,
+          "label": "Custom environments",
+          "description": "Add extra environment variables for advanced setup."
+        }
+      }
+    }
+  ],
+  "rawSetup": {
+    "id": "raw-setup",
+    "title": "Raw setup",
+    "description": "Start with a minimal plug_config and edit it directly.",
+    "config": {
+      "mode": "manual"
+    },
+    "appBaseUrl": {
+      "label": "App base URL",
+      "defaultValue": "https://care-ai-vision.pages.dev"
+    },
+    "environments": {
+      "mandatory": [],
+      "defaults": [],
+      "custom": {
+        "enabled": true,
+        "label": "Custom environments"
+      }
+    }
+  }
+}
