@@ -18,33 +18,56 @@
     }
   ],
   "baseConfig": {
-    "url": "https://care-serial-scanner.ohc.network/assets/remoteEntry.js",
+    "url": "https://care-serial-scanner-fe.pages.dev/assets/remoteEntry.js",
     "name": "care_serial_scanner_fe",
     "plug": "care_serial_scanner_fe"
   },
   "source": {
     "repository": "https://github.com/ohcnetwork/care_serial_scanner_fe",
-    "appBaseUrl": "http://localhost:5173"
+    "appBaseUrl": "http://localhost:10121"
   },
   "standardConfigurations": [
     {
       "id": "local-dev",
       "title": "Local development",
-      "description": "Attach the local preview output from care_serial_scanner_fe for development and manual testing.",
+      "description": "Connect to your local development server for testing and debugging.",
       "config": {
         "mode": "local"
       },
       "appBaseUrl": {
         "label": "App base URL",
         "description": "Base URL where the frontend plug is served.",
-        "defaultValue": "http://localhost:5173"
+        "defaultValue": "http://localhost:10121"
       },
       "environments": {
         "mandatory": [],
         "defaults": [],
         "optional": [],
         "custom": {
-          "enabled": true,
+          "enabled": false,
+          "label": "Custom environments",
+          "description": "Add extra environment variables for advanced setup."
+        }
+      }
+    },
+    {
+      "id": "production",
+      "title": "Production",
+      "description": "Production configuration for care_serial_scanner_fe.",
+      "config": {
+        "mode": "production"
+      },
+      "appBaseUrl": {
+        "label": "App base URL",
+        "description": "Base URL where the frontend plug is served.",
+        "defaultValue": "https://care-serial-scanner-fe.pages.dev/"
+      },
+      "environments": {
+        "mandatory": [],
+        "defaults": [],
+        "optional": [],
+        "custom": {
+          "enabled": false,
           "label": "Custom environments",
           "description": "Add extra environment variables for advanced setup."
         }
@@ -60,13 +83,13 @@
     },
     "appBaseUrl": {
       "label": "App base URL",
-      "defaultValue": "https://care-serial-scanner.ohc.network"
+      "defaultValue": "https://care-serial-scanner-fe.pages.dev"
     },
     "environments": {
       "mandatory": [],
       "defaults": [],
       "custom": {
-        "enabled": true,
+        "enabled": false,
         "label": "Custom environments"
       }
     }
