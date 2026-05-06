@@ -2,7 +2,7 @@
   "$schema": "../schema/app.schema.json",
   "slug": "care_teleicu_devices_fe",
   "name": "CARE TeleICU Devices",
-  "description": "TeleICU Devices MFE Plug for CARE. Enables integration with Gateway, ONVIF Cameras, and Vitals Observation Devices (HL7 Monitors) for remote ICU monitoring.",
+  "description": "CARE plugin that enables integration with TeleICU based devices such as Gateway, ONVIF Cameras, and Vitals Observation Devices (HL7 Monitors) for remote ICU monitoring.",
   "featured": true,
   "iconUrl": "../assets/care-teleicu-devices.svg",
   "developer": {
@@ -18,13 +18,18 @@
     }
   ],
   "baseConfig": {
-    "url": "https://care-teleicu-devices.ohc.network/assets/remoteEntry.js",
+    "url": "https://care-teleicu-devices-fe.pages.dev/assets/remoteEntry.js",
     "name": "care_teleicu_devices_fe",
     "plug": "care_teleicu_devices_fe"
   },
+  "healthCheck": {
+    "url": "{{appBaseUrl}}/assets/remoteEntry.js",
+    "method": "GET",
+    "successStatus": 200
+  },
   "source": {
     "repository": "https://github.com/ohcnetwork/care_teleicu_devices_fe",
-    "appBaseUrl": "http://localhost:5173"
+    "appBaseUrl": "http://localhost:10120"
   },
   "standardConfigurations": [
     {
@@ -37,7 +42,7 @@
       "appBaseUrl": {
         "label": "App base URL",
         "description": "Base URL where the frontend plug is served.",
-        "defaultValue": "http://localhost:5173"
+        "defaultValue": "http://localhost:10120"
       },
       "environments": {
         "mandatory": [],
@@ -60,13 +65,13 @@
     },
     "appBaseUrl": {
       "label": "App base URL",
-      "defaultValue": "https://care-teleicu-devices.ohc.network"
+      "defaultValue": "https://care-teleicu-devices-fe.pages.dev"
     },
     "environments": {
       "mandatory": [],
       "defaults": [],
       "custom": {
-        "enabled": true,
+        "enabled": false,
         "label": "Custom environments"
       }
     }
