@@ -6,7 +6,8 @@
   "scripts": {
     "appstore:generate": "node scripts/generate-indexes.mjs",
     "appstore:check": "node scripts/generate-indexes.mjs --check",
-    "serve": "npx http-server -p 3000 --cors"
+    "serve": "npx http-server -p 3000 --cors",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
     "plugins"
   ],
   "author": "ohcnetwork",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
 }

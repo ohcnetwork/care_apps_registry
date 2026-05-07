@@ -30,9 +30,10 @@ AppStore/
 
 1. Add or update a JSON file in `apps/`.
 2. Keep the file aligned with `schema/app.schema.json`.
-3. Run `npm run appstore:generate` from the repository root.
-4. Commit the canonical app JSON and the generated indexes.
-5. Open a pull request.
+3. Commit your changes — the pre-commit hook runs `npm run appstore:generate` automatically and stages the updated indexes before the commit is finalised.
+4. Open a pull request.
+
+> **Note:** The pre-commit hook is powered by [Husky](https://typicode.github.io/husky). Run `npm install` once after cloning to activate it.
 
 On pull requests, CI validates that the indexes are up to date. On merge, GitHub Actions regenerate the indexes and commit them back if they changed.
 
@@ -54,7 +55,7 @@ Environment fields default into `meta.config.<key>`. A setup-level `appBaseUrl` 
 
 ## Local Preview
 
-Generate indexes:
+Indexes are regenerated automatically on every commit via the pre-commit hook. To regenerate them manually:
 
 ```bash
 npm run appstore:generate

@@ -1,0 +1,1 @@
+npm run appstore:generate && git add index.json
