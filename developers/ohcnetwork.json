@@ -63,6 +63,38 @@
       ]
     },
     {
+      "slug": "care_ai_widgets_fe",
+      "name": "CARE AI Widgets",
+      "description": "CARE frontend plugin that adds AI-powered clinical widgets to the encounter overview — configurable, prompt-driven summaries, scores, ranked lists, and rich markdown rendered directly inside the patient chart.",
+      "featured": false,
+      "iconUrl": "../assets/care-ai-widgets.svg",
+      "appUrl": "../apps/care-ai-widgets.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "productivity",
+          "name": "Productivity",
+          "description": "Admin-facing tools and workflow accelerators."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_ai_widgets_fe for development and manual testing."
+        },
+        {
+          "id": "production",
+          "title": "Production",
+          "description": "Production configuration for care_ai_widgets_fe."
+        }
+      ]
+    },
+    {
       "slug": "care_analytics_fe",
       "name": "CARE Analytics",
       "description": "Analytics dashboard plugin for CARE. Provides data visualization and reporting capabilities for healthcare facility operations and patient care metrics.",
