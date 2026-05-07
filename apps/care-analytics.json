@@ -49,7 +49,7 @@
         "defaults": [],
         "optional": [],
         "custom": {
-          "enabled": true,
+          "enabled": false,
           "label": "Custom environments",
           "description": "Add extra environment variables for advanced setup."
         }
