@@ -93,7 +93,7 @@
     {
       "slug": "care_kutumba_fe",
       "name": "CARE Kutumba",
-      "description": "Kutumba integration plugin for CARE. Enables integration with the Kutumba family database system for patient identification and demographic data exchange.",
+      "description": "Kutumba integration plugin for CARE. Enables integration with Karnataka's Kutumba family database system for patient identification and demographic data exchange.",
       "featured": false,
       "iconUrl": "../assets/care-kutumba.svg",
       "appUrl": "../apps/care-kutumba.json",
