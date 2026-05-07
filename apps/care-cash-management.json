@@ -23,7 +23,7 @@
     "plug": "care_cash_management_fe"
   },
   "healthCheck": {
-    "url": "{{appBaseUrl}}/assets/remoteEntry.js",
+    "url": "{{apiUrl}}/api/care_odoo/ping",
     "method": "GET",
     "successStatus": 200
   },
