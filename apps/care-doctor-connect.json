@@ -32,7 +32,8 @@
       "title": "Local development",
       "description": "Attach the local preview output from care_doctor_connect_fe for development and manual testing.",
       "config": {
-        "mode": "local"
+        "mode": "local",
+        "allowed_filter_roles": ["Doctor"]
       },
       "appBaseUrl": {
         "label": "App base URL",
@@ -42,7 +43,22 @@
       "environments": {
         "mandatory": [],
         "defaults": [],
-        "optional": [],
+        "optional": [
+          {
+            "key": "allowed_facility_organizations",
+            "label": "Allowed facility organizations",
+            "description": "Optional list of facility organization IDs the directory is restricted to. Leave empty for no restriction.",
+            "type": "string[]",
+            "path": "meta.config.allowed_facility_organizations"
+          },
+          {
+            "key": "allowed_filter_roles",
+            "label": "Allowed filter roles",
+            "description": "Optional list of role names users can filter providers by.",
+            "type": "string[]",
+            "path": "meta.config.allowed_filter_roles"
+          }
+        ],
         "custom": {
           "enabled": true,
           "label": "Custom environments",
@@ -65,6 +81,22 @@
     "environments": {
       "mandatory": [],
       "defaults": [],
+      "optional": [
+        {
+          "key": "allowed_facility_organizations",
+          "label": "Allowed facility organizations",
+          "description": "Optional list of facility organization IDs the directory is restricted to.",
+          "type": "string[]",
+          "path": "meta.config.allowed_facility_organizations"
+        },
+        {
+          "key": "allowed_filter_roles",
+          "label": "Allowed filter roles",
+          "description": "Optional list of role names users can filter providers by.",
+          "type": "string[]",
+          "path": "meta.config.allowed_filter_roles"
+        }
+      ],
       "custom": {
         "enabled": true,
         "label": "Custom environments"
