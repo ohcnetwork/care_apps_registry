@@ -32,8 +32,7 @@
       "title": "Local development",
       "description": "Attach the local preview output from care_doctor_connect_fe for development and manual testing.",
       "config": {
-        "mode": "local",
-        "allowed_filter_roles": ["Doctor"]
+        "mode": "local"
       },
       "appBaseUrl": {
         "label": "App base URL",
