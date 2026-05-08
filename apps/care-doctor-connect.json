@@ -46,14 +46,14 @@
           {
             "key": "allowed_facility_organizations",
             "label": "Allowed facility organizations",
-            "description": "Optional list of facility organization IDs the directory is restricted to. Leave empty for no restriction.",
+            "description": "Optional list of facility organization names to show in doctor connect directory. If not set, all organizations are shown.",
             "type": "string[]",
             "path": "meta.config.allowed_facility_organizations"
           },
           {
             "key": "allowed_filter_roles",
             "label": "Allowed filter roles",
-            "description": "Optional list of role names users can filter providers by.",
+            "description": "Optional list of role names to show in filter. If not set, all roles are shown.",
             "type": "string[]",
             "path": "meta.config.allowed_filter_roles"
           }
@@ -84,14 +84,14 @@
         {
           "key": "allowed_facility_organizations",
           "label": "Allowed facility organizations",
-          "description": "Optional list of facility organization IDs the directory is restricted to.",
+          "description": "Optional list of facility organization names to show in doctor connect directory. If not set, all organizations are shown.",
           "type": "string[]",
           "path": "meta.config.allowed_facility_organizations"
         },
         {
           "key": "allowed_filter_roles",
           "label": "Allowed filter roles",
-          "description": "Optional list of role names users can filter providers by.",
+          "description": "Optional list of role names to show in filter. If not set, all roles are shown.",
           "type": "string[]",
           "path": "meta.config.allowed_filter_roles"
         }
