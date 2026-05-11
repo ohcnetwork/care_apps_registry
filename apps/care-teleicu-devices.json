@@ -23,7 +23,7 @@
     "plug": "care_teleicu_devices_fe"
   },
   "healthCheck": {
-    "url": "{{appBaseUrl}}/assets/remoteEntry.js",
+    "url": "{{apiUrl}}/api/gateway_device/jwks.json/",
     "method": "GET",
     "successStatus": 200
   },
