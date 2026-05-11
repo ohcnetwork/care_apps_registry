@@ -65,6 +65,7 @@
       "id": "production",
       "title": "Production",
       "description": "Production configuration for care_pretty_print_fe.",
+      "default": true,
       "config": {
         "mode": "production"
       },

@@ -141,6 +141,9 @@
         "description": {
           "type": "string"
         },
+        "default": {
+          "type": "boolean"
+        },
         "config": {
           "type": "object",
           "additionalProperties": true
