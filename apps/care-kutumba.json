@@ -109,7 +109,7 @@
       "appBaseUrl": {
         "label": "App base URL",
         "description": "Base URL where the frontend plug is served.",
-        "defaultValue": "https://care-kutumba-fe.pages.dev"
+        "defaultValue": "https://develop.care-kutumba-fe.pages.dev"
       },
       "environments": {
         "mandatory": [
@@ -155,7 +155,7 @@
     },
     "appBaseUrl": {
       "label": "App base URL",
-      "defaultValue": "https://care-kutumba-fe.pages.dev"
+      "defaultValue": "https://develop.care-kutumba-fe.pages.dev"
     },
     "environments": {
       "mandatory": [],
