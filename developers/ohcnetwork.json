@@ -257,7 +257,7 @@
         {
           "id": "production",
           "title": "Production",
-          "description": "Production configuration for care_analytics_fe."
+          "description": "Production configuration for care_kutumba_fe with the minimum required environment variables."
         }
       ]
     },
