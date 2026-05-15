@@ -117,7 +117,7 @@
     {
       "slug": "care_teleicu_devices_fe",
       "name": "CARE TeleICU Devices",
-      "description": "TeleICU Devices MFE Plug for CARE. Enables integration with Gateway, ONVIF Cameras, and Vitals Observation Devices (HL7 Monitors) for remote ICU monitoring.",
+      "description": "CARE plugin that enables integration with TeleICU based devices such as Gateway, ONVIF Cameras, and Vitals Observation Devices (HL7 Monitors) for remote ICU monitoring.",
       "featured": true,
       "iconUrl": "./assets/care-teleicu-devices.svg",
       "appUrl": "./apps/care-teleicu-devices.json",
@@ -138,6 +138,11 @@
           "id": "local-dev",
           "title": "Local development",
           "description": "Attach the local preview output from care_teleicu_devices_fe for development and manual testing."
+        },
+        {
+          "id": "production",
+          "title": "Production",
+          "description": "Attach the production output from care_teleicu_devices_fe for live usage."
         }
       ]
     }
