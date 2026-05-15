@@ -71,7 +71,7 @@
     {
       "slug": "care_cash_management_fe",
       "name": "CARE Cash Management",
-      "description": "Cash management plugin for CARE. Provides cash drawer session management, transaction tracking, and financial reconciliation for healthcare facility billing operations.",
+      "description": "CARE Cash Management plugin provides cash drawer session management, transaction tracking, and financial reconciliation for healthcare facility billing operations.",
       "featured": false,
       "iconUrl": "../assets/care-cash-management.svg",
       "appUrl": "../apps/care-cash-management.json",
@@ -92,6 +92,11 @@
           "id": "local-dev",
           "title": "Local development",
           "description": "Attach the local preview output from care_cash_management_fe for development and manual testing."
+        },
+        {
+          "id": "production",
+          "title": "Production",
+          "description": "Production configuration for care_cash_management_fe."
         }
       ]
     },
