@@ -23,7 +23,7 @@
     "plug": "care_ai_vision_fe"
   },
   "healthCheck": {
-    "url": "{{appBaseUrl}}/assets/remoteEntry.js",
+    "url": "{{apiUrl}}/api/care_ai/health",
     "method": "GET",
     "successStatus": 200
   },
@@ -45,13 +45,7 @@
         "defaultValue": "http://localhost:10120"
       },
       "environments": {
-        "mandatory": [
-          {
-            "key": "REACT_APP_GEMINI_API_KEY",
-            "label": "Gemini API Key",
-            "description": "API key for Google Gemini Flash, obtain from https://aistudio.google.com/apikey."
-          }
-        ],
+        "mandatory": [],
         "defaults": [],
         "optional": [],
         "custom": {
@@ -65,6 +59,7 @@
       "id": "production",
       "title": "Production",
       "description": "Production configuration for care_ai_vision_fe.",
+      "default": true,
       "config": {
         "mode": "production"
       },
@@ -74,13 +69,7 @@
         "defaultValue": "https://care-ai-vision.pages.dev"
       },
       "environments": {
-        "mandatory": [
-          {
-            "key": "REACT_APP_GEMINI_API_KEY",
-            "label": "Gemini API Key",
-            "description": "API key for Google Gemini Flash, obtain from https://aistudio.google.com/apikey."
-          }
-        ],
+        "mandatory": [],
         "defaults": [],
         "optional": [],
         "custom": {
