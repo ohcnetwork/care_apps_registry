@@ -2,7 +2,7 @@
   "$schema": "../schema/app.schema.json",
   "slug": "care_kutumba_fe",
   "name": "CARE Kutumba",
-  "description": "Kutumba integration plugin for CARE. Enables integration with the Kutumba family database system for patient identification and demographic data exchange.",
+  "description": "Kutumba integration plugin for CARE. Enables integration with Karnataka's Kutumba family database system for patient identification and demographic data exchange.",
   "featured": false,
   "iconUrl": "../assets/care-kutumba.svg",
   "developer": {
@@ -18,13 +18,18 @@
     }
   ],
   "baseConfig": {
-    "url": "https://care-kutumba.ohc.network/assets/remoteEntry.js",
+    "url": "https://care-kutumba-fe.pages.dev/assets/remoteEntry.js",
     "name": "care_kutumba_fe",
     "plug": "care_kutumba_fe"
   },
+  "healthCheck": {
+    "url": "{{apiUrl}}/api/care_kutumba/ping/",
+    "method": "GET",
+    "successStatus": 200
+  },
   "source": {
-    "repository": "https://github.com/ohcnetwork/care_kutumba_fe",
-    "appBaseUrl": "http://localhost:5173"
+    "repository": "https://github.com/10bedicu/care_kutumba_fe",
+    "appBaseUrl": "http://localhost:11111"
   },
   "standardConfigurations": [
     {
@@ -37,11 +42,102 @@
       "appBaseUrl": {
         "label": "App base URL",
         "description": "Base URL where the frontend plug is served.",
-        "defaultValue": "http://localhost:5173"
+        "defaultValue": "http://localhost:11111"
       },
       "environments": {
-        "mandatory": [],
-        "defaults": [],
+        "mandatory": [
+          {
+            "key": "REACT_KUTUMBA_BPL_TAG_ID",
+            "label": "BPL tag UUID",
+            "description": "UUID of the instance level BPL/PHH tag"
+          },
+          {
+            "key": "REACT_KUTUMBA_APL_TAG_ID",
+            "label": "APL tag UUID",
+            "description": "UUID of the instance level APL/NPHH tag"
+          },
+          {
+            "key": "REACT_KUTUMBA_RC_NUMBER_IDENTIFIER_ID",
+            "label": "Ration card number identifier UUID",
+            "description": "UUID of the instance level patient identifier: Ration card number"
+          }
+        ],
+        "defaults": [
+          {
+            "key": "REACT_KUTUMBA_AUTO_SUBMIT_ON_FILL",
+            "label": "Auto-submit on fill",
+            "description": "Auto-submit the patient registration form after filling from Kutumba. Set to \"true\" to enable.",
+            "defaultValue": "false"
+          }
+        ],
+        "optional": [
+          {
+            "key": "REACT_KUTUMBA_HEALTH_ID_IDENTIFIER_ID",
+            "label": "Health ID identifier UUID",
+            "description": "Optional, not used in production. UUID of the instance level patient identifier: Health ID number."
+          },
+          {
+            "key": "REACT_KUTUMBA_EDUCATION_ID_IDENTIFIER_ID",
+            "label": "Education ID identifier ID",
+            "description": "Optional, not used in production. UUID of the instance level patient identifier: Education ID number."
+          },
+          {
+            "key": "REACT_KUTUMBA_STUDENT_UNVERIFIED_TAG_ID",
+            "label": "Student (unverified) tag UUID",
+            "description": "Optional, not used in production. UUID of the instance level patient identifier: Student unverified."
+          },
+          {
+            "key": "REACT_KUTUMBA_PWD_UNVERIFIED_TAG_ID",
+            "label": "PWD (unverified) tag UUID",
+            "description": "Optional, not used in production. UUID of the instance level patient identifier: PWD unverified."
+          }
+        ],
+        "custom": {
+          "enabled": true,
+          "label": "Custom environments",
+          "description": "Add extra environment variables for advanced setup."
+        }
+      }
+    },
+    {
+      "id": "production",
+      "title": "Production",
+      "description": "Production configuration for care_kutumba_fe with the minimum required environment variables.",
+      "default": true,
+      "config": {
+        "mode": "production"
+      },
+      "appBaseUrl": {
+        "label": "App base URL",
+        "description": "Base URL where the frontend plug is served.",
+        "defaultValue": "https://develop.care-kutumba-fe.pages.dev"
+      },
+      "environments": {
+        "mandatory": [
+          {
+            "key": "REACT_KUTUMBA_BPL_TAG_ID",
+            "label": "BPL tag ID",
+            "description": "UUID of the instance level BPL/PHH tag"
+          },
+          {
+            "key": "REACT_KUTUMBA_APL_TAG_ID",
+            "label": "APL tag ID",
+            "description": "UUID of the instance level APL/NPHH tag"
+          },
+          {
+            "key": "REACT_KUTUMBA_RC_NUMBER_IDENTIFIER_ID",
+            "label": "RC number identifier ID",
+            "description": "UUID of the instance level patient identifier: Ration card number"
+          }
+        ],
+        "defaults": [
+          {
+            "key": "REACT_KUTUMBA_AUTO_SUBMIT_ON_FILL",
+            "label": "Auto-submit on fill",
+            "description": "Auto-submit the registration form after filling from Kutumba. Set to \"true\" to enable.",
+            "defaultValue": "false"
+          }
+        ],
         "optional": [],
         "custom": {
           "enabled": true,
@@ -60,7 +156,7 @@
     },
     "appBaseUrl": {
       "label": "App base URL",
-      "defaultValue": "https://care-kutumba.ohc.network"
+      "defaultValue": "https://develop.care-kutumba-fe.pages.dev"
     },
     "environments": {
       "mandatory": [],
