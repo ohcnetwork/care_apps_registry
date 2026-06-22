@@ -1,0 +1,103 @@
+{
+  "$schema": "../schema/app.schema.json",
+  "slug": "care_excalidraw",
+  "name": "CARE Excalidraw",
+  "description": "CARE plugin that brings an Excalidraw-powered whiteboard into CARE, letting clinicians sketch and annotate diagrams directly within patient workflows.",
+  "featured": false,
+  "iconUrl": "../assets/care-excalidraw.svg",
+  "developer": {
+    "slug": "ohcnetwork",
+    "name": "Open Healthcare Network",
+    "url": "https://github.com/ohcnetwork"
+  },
+  "categories": [
+    {
+      "slug": "productivity",
+      "name": "Productivity",
+      "description": "Admin-facing tools and workflow accelerators."
+    }
+  ],
+  "baseConfig": {
+    "url": "https://care-excalidraw.pages.dev/assets/remoteEntry.js",
+    "name": "care_excalidraw",
+    "plug": "care_excalidraw"
+  },
+  "healthCheck": {
+    "url": "{{appBaseUrl}}/assets/remoteEntry.js",
+    "method": "GET",
+    "successStatus": 200
+  },
+  "source": {
+    "repository": "https://github.com/ohcnetwork/care_excalidraw",
+    "appBaseUrl": "http://localhost:4173"
+  },
+  "standardConfigurations": [
+    {
+      "id": "local-dev",
+      "title": "Local development",
+      "description": "Attach the local preview output from care_excalidraw for development and manual testing.",
+      "config": {
+        "mode": "local"
+      },
+      "appBaseUrl": {
+        "label": "App base URL",
+        "description": "Base URL where the frontend plug is served.",
+        "defaultValue": "http://localhost:4173"
+      },
+      "environments": {
+        "mandatory": [],
+        "defaults": [],
+        "optional": [],
+        "custom": {
+          "enabled": true,
+          "label": "Custom environments",
+          "description": "Add extra environment variables for advanced setup."
+        }
+      }
+    },
+    {
+      "id": "production",
+      "title": "Production",
+      "description": "Production configuration for care_excalidraw served from Cloudflare Pages.",
+      "default": true,
+      "config": {
+        "mode": "production"
+      },
+      "appBaseUrl": {
+        "label": "App base URL",
+        "description": "Base URL where the frontend plug is served.",
+        "defaultValue": "https://care-excalidraw.pages.dev"
+      },
+      "environments": {
+        "mandatory": [],
+        "defaults": [],
+        "optional": [],
+        "custom": {
+          "enabled": false,
+          "label": "Custom environments",
+          "description": "Add extra environment variables for advanced setup."
+        }
+      }
+    }
+  ],
+  "rawSetup": {
+    "id": "raw-setup",
+    "title": "Raw setup",
+    "description": "Start with a minimal plug_config and edit it directly.",
+    "config": {
+      "mode": "manual"
+    },
+    "appBaseUrl": {
+      "label": "App base URL",
+      "defaultValue": "https://care-excalidraw.pages.dev"
+    },
+    "environments": {
+      "mandatory": [],
+      "defaults": [],
+      "custom": {
+        "enabled": true,
+        "label": "Custom environments"
+      }
+    }
+  }
+}
