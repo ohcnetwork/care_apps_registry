@@ -28,7 +28,7 @@
     "successStatus": 200
   },
   "source": {
-    "repository": "https://github.com/ohcnetwork/care_excalidraw",
+    "repository": "https://github.com/ohcnetwork/care_excalidraw_fe",
     "appBaseUrl": "http://localhost:4173"
   },
   "standardConfigurations": [
