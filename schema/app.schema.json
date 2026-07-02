@@ -210,8 +210,17 @@
         "placeholder": {
           "type": "string"
         },
+        "type": {
+          "type": "string",
+          "enum": ["string", "number", "boolean", "string[]"],
+          "default": "string",
+          "description": "Value type for the environment field. Defaults to \"string\" when omitted."
+        },
         "defaultValue": {
-          "type": "string"
+          "type": ["string", "number", "boolean", "array"],
+          "items": {
+            "type": "string"
+          }
         },
         "path": {
           "type": "string"
