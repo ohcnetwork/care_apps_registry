@@ -186,6 +186,38 @@
       ]
     },
     {
+      "slug": "care_excalidraw",
+      "name": "CARE Excalidraw",
+      "description": "CARE plugin that brings an Excalidraw-powered whiteboard into CARE, letting clinicians sketch and annotate diagrams directly within patient workflows.",
+      "featured": false,
+      "iconUrl": "../assets/care-excalidraw.svg",
+      "appUrl": "../apps/care-excalidraw.json",
+      "developer": {
+        "slug": "ohcnetwork",
+        "name": "Open Healthcare Network",
+        "url": "https://github.com/ohcnetwork"
+      },
+      "categories": [
+        {
+          "slug": "productivity",
+          "name": "Productivity",
+          "description": "Admin-facing tools and workflow accelerators."
+        }
+      ],
+      "standardConfigurations": [
+        {
+          "id": "local-dev",
+          "title": "Local development",
+          "description": "Attach the local preview output from care_excalidraw for development and manual testing."
+        },
+        {
+          "id": "production",
+          "title": "Production",
+          "description": "Production configuration for care_excalidraw served from Cloudflare Pages."
+        }
+      ]
+    },
+    {
       "slug": "care_hcx_fe",
       "name": "CARE HCX",
       "description": "Health Claims Exchange (HCX) integration plugin for CARE. Enables insurance claim processing, preauthorization, and communication with health insurance payers through the HCX protocol.",
